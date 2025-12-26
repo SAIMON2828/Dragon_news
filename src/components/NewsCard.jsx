@@ -1,8 +1,10 @@
 import { FaEye, FaStar } from "react-icons/fa";
 import { BsBookmark, BsShare } from "react-icons/bs";
+import { Link } from "react-router";
 
 const NewsCard = ({ news }) => {
     const {
+        id,
         title,
         author,
         thumbnail_url,
@@ -62,9 +64,9 @@ const NewsCard = ({ news }) => {
                         : details}
                 </p>
 
-                <button className="text-secondary font-semibold text-sm mt-1 w-fit">
+                <Link to={`/news-details/${id}`} className="text-secondary font-semibold text-sm mt-1 w-fit">
                     Read More
-                </button>
+                </Link>
             </div>
 
             {/* Footer */}

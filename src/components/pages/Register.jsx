@@ -8,13 +8,13 @@ const Register = () => {
 
     const handleRegister = (e) => {
         e.preventDefault();
-        console.log(e.target);
+        // console.log(e.target);
         const form = e.target;
         const name = form.name.value;
         const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log({ name, photo, email, password });
+        // console.log({ name, photo, email, password });
 
         createUser(email, password)
             .then(result => {
